@@ -13,14 +13,14 @@ class _HomeState extends State<Home> {
   int currentPage = 0;
   String currentTitle = "Home";
   Color currentColor = Colors.deepPurple;
-  Color inactiveColor = Color(0xFF262B2A);
-  Color activeColor = Color(0xFFFF8E91);
 
   @override
   Widget build(BuildContext context) {
+    Color inactiveColor = Theme.of(context).indicatorColor;
     return Scaffold(
-      backgroundColor: Colors.white,
       bottomNavigationBar: CubertoBottomBar(
+        barBorderRadius: BorderRadius.only(
+            topLeft: Radius.circular(35.0), topRight: Radius.circular(35.0)),
         inactiveIconColor: inactiveColor,
         tabStyle: CubertoTabStyle
             .STYLE_FADED_BACKGROUND, // By default its CubertoTabStyle.STYLE_NORMAL
@@ -30,21 +30,21 @@ class _HomeState extends State<Home> {
           TabData(
             iconData: Feather.home,
             title: "Home",
-            tabColor: activeColor,
+            tabColor: Color(0xFF2F95A1),
           ),
           TabData(
             iconData: Feather.heart,
             title: "Favorites",
-            tabColor: activeColor,
+            tabColor: Color(0xFFFF8E91),
           ),
           TabData(
               iconData: Feather.briefcase,
               title: "Jobs",
-              tabColor: activeColor),
+              tabColor: Color(0xFFFAA978)),
           TabData(
               iconData: Feather.user,
               title: "Profile",
-              tabColor: activeColor),
+              tabColor: Color(0xFF8B85C3)),
         ],
         onTabChangedListener: (position, title, color) {
           setState(() {
@@ -57,8 +57,7 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: Container(
           child: Padding(
-            padding:
-                const EdgeInsets.symmetric(vertical: 6.0, horizontal: 15.0),
+            padding: const EdgeInsets.fromLTRB(15.0, 6.0, 15.0, 0.0),
             child: Column(
               children: <Widget>[
                 Row(
@@ -221,7 +220,7 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: 50.0),
                 DestinationRec(),
-                GridDest()
+                GridDest(),
               ],
             ),
           ),
