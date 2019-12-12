@@ -2,6 +2,7 @@ import 'package:first_app/destinationDetail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'destination.dart';
+import 'test.dart';
 
 class GridDest extends StatelessWidget {
   final List<Destination> _listItem = [
@@ -94,7 +95,7 @@ class GridDest extends StatelessWidget {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
-                          color: Color.fromRGBO(255, 255, 255, 0.45),
+                          color: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.45),
                         ),
                         padding: EdgeInsets.symmetric(
                             vertical: 4.0, horizontal: 12.0),
@@ -131,7 +132,7 @@ class GridDest extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (context) =>
-                      DestinationDetail(detail: _listItem[index])),
+                      Test(detail: _listItem[index])),
             );
           },
         ),
@@ -143,19 +144,3 @@ class GridDest extends StatelessWidget {
     );
   }
 }
-
-// GridView.count(
-//         crossAxisCount: 2,
-//         padding: EdgeInsets.all(20),
-//         crossAxisSpacing: 20,
-//         mainAxisSpacing: 20,
-//         children: _listItem
-//             .map((item) => Card(
-//                   child: Container(
-//                     decoration: BoxDecoration(
-//                         image: DecorationImage(
-//                             image: NetworkImage(item), fit: BoxFit.cover)),
-//                   ),
-//                 ))
-//             .toList(),
-//       ),

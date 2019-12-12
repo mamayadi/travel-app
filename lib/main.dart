@@ -13,8 +13,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    Brightness brightness = MediaQuery.platformBrightnessOf(context);
-    print(brightness);
     final darkTheme = ThemeData(
       primarySwatch: Colors.grey,
       primaryColor: Colors.black,
@@ -23,7 +21,7 @@ class _MyAppState extends State<MyApp> {
       accentColor: Colors.white,
       accentIconTheme: IconThemeData(color: Colors.black),
       dividerColor: Colors.black12,
-      indicatorColor: Colors.black54,
+      indicatorColor: Colors.white54,
     );
 
     final lightTheme = ThemeData(
@@ -35,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       accentIconTheme: IconThemeData(color: Colors.white),
       dividerColor: Colors.white54,
       scaffoldBackgroundColor: Colors.white,
-      indicatorColor: Color(0xFF262B2A),
+      indicatorColor: Colors.grey[800],
     );
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
     //     systemNavigationBarColor: Colors.white,

@@ -114,7 +114,7 @@ class _HomeState extends State<Home> {
                         Container(
                           child: Ink(
                             decoration: ShapeDecoration(
-                              color: Color(0xFFF1F6F7),
+                              color: Color(0xFF2F95A1).withOpacity(0.1),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16.0)),
                             ),
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                         Container(
                           child: Ink(
                             decoration: ShapeDecoration(
-                              color: Color(0xFFFFF5F4),
+                              color: Color(0xFFFE9393).withOpacity(0.1),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16.0)),
                             ),
@@ -168,7 +168,7 @@ class _HomeState extends State<Home> {
                         Container(
                           child: Ink(
                             decoration: ShapeDecoration(
-                              color: Color(0xFFFEF7F3),
+                              color: Color(0xFFFAA978).withOpacity(0.1),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16.0)),
                             ),
@@ -195,7 +195,7 @@ class _HomeState extends State<Home> {
                         Container(
                           child: Ink(
                             decoration: ShapeDecoration(
-                              color: Color(0xFFF5F3FB),
+                              color: Color(0xFF8B85C3).withOpacity(0.1),
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(16.0)),
                             ),
@@ -219,7 +219,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
                 SizedBox(height: 50.0),
-                DestinationRec(),
+                DestinationRec(title: 'Best Destination'),
                 GridDest(),
               ],
             ),
